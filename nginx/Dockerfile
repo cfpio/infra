@@ -3,6 +3,7 @@ FROM nginx
 COPY proxy_params /etc/nginx/
 COPY ssl.conf /etc/nginx/conf.d/01-ssl.conf
 COPY redirect_https.conf /etc/nginx/conf.d/02-redirect_https.conf
+COPY gzip.conf /etc/nginx/conf.d/03-gzip.conf
 COPY cfpio.conf /etc/nginx/conf.d/cfpio.template
 
 VOLUME "/etc/ssl/cfpio/"
